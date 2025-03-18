@@ -1,0 +1,252 @@
+/***
+ *    ┓ ┏┏┓┓┏┳┓┏┓┳┓  ┏┓┏┓┏┓
+ *    ┃┃┃┣┫┗┫┣┫┣┫┣┫━━┃ ┗┓┗┓
+ *    ┗┻┛┛┗┗┛┻┛┛┗┛┗  ┗┛┗┛┗┛
+ *                                         
+ */
+
+
+/*------------Importing Macchiato Colors---------------*/
+@import "macchiato.css";
+
+
+/*------------Global Properties-----------------*/
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 20px;
+    min-height: 0;
+}
+
+/*------------Window--------------------*/
+#window{
+    background: @base;
+    opacity: 0.75;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*----------Waybar Window------------*/
+window#waybar {
+    background: @base;
+}
+
+/*-----------Tooltip--------------*/
+tooltip {
+  background: @mantle;
+  border: 2px solid @lavender;
+  border-radius: 12px;
+}
+tooltip label {
+  color: @text;
+  padding: 6px;
+}
+
+/*---------Workspaces-----------------*/
+#workspaces {
+    background: @mantle;
+    margin: 5px 5px;
+    padding: 8px 5px;
+    border-radius: 16px;
+    color: @text;
+}
+#workspaces button {
+    font-weight: bold;
+    padding: 0px 5px;
+    margin: 0px 3px;
+    border-radius: 16px;
+    color: transparent;
+    background: @surface1;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+    font-weight: bold;
+    background-color: @overlay0;
+    color: @text;
+    border-radius: 16px;
+    min-width: 50px;
+    background-size: 400% 400%;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+    font-weight: bold;
+    background-color: @surface0;
+    color: @text;
+    border-radius: 16px;
+    min-width: 50px;
+    background-size: 400% 400%;
+}
+
+#workspaces button.urgent {
+    font-weight: bold;
+    background-color: @red;
+    color: @text;
+    border-radius: 16px;
+    min-width: 50px;
+    background-size: 400% 400%;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/*-----------SwayNC & Weather------------*/
+#custom-swaync {
+    font-weight: bold;
+    background: @mantle;
+    margin: 5px; 
+    padding: 8px 16px;
+    color: @text;
+}
+
+#custom-swaync {
+    border-radius: 10px 24px 10px 24px;
+}
+
+/*---------------Tray, Clock, Playerctl, Battery, Cpu, Temperature, Colorpicker, Memory, Idle_inhibitor----------------------*/
+#tray, #pulseaudio, #network, #battery, #cpu, #temperature, #memory, #custom-pacman, #idle_inhibitor,
+#custom-playerctl.backward, #custom-playerctl.play, #custom-playerctl.foward{
+    background: @mantle;
+    font-weight: bold;
+    margin: 5px 0px;
+}
+#tray, #pulseaudio, #network #battery{
+    color: @text;
+    border-radius: 10px 24px 10px 24px;
+    padding: 0 20px;
+    margin-left: 7px;
+}
+#clock {
+    color: @text;
+    background: @mantle;
+    border-radius: 0px 0px 0px 40px;
+    padding: 10px 10px 10px 25px;
+    margin-left: 7px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#tray menu * {
+    padding: 0px 5px;
+    transition: all .3s ease; 
+}
+
+#tray menu separator {
+    padding: 0px 5px;
+    transition: all .3s ease; 
+}
+
+
+/*-----------Playerctl-------------------*/
+#custom-playerctl.backward, #custom-playerctl.play, #custom-playerctl.foward {
+    background: @mantle;
+    font-size: 24px;
+}
+#custom-playerctl.backward:hover, #custom-playerctl.play:hover, #custom-playerctl.foward:hover{
+    color: @text;
+}
+#custom-playerctl.backward {
+    color: @lavender;
+    border-radius: 24px 0px 0px 10px;
+    padding-left: 16px;
+    margin-left: 7px;
+}
+#custom-playerctl.play {
+    color: @lavender;
+    padding: 0 5px;
+}
+#custom-playerctl.foward {
+    color: @lavender;
+    border-radius: 0px 10px 24px 0px;
+    padding-right: 12px;
+    margin-right: 7px
+}
+#custom-playerlabel {
+    background: @mantle;
+    color: @text;
+    padding: 0 20px;
+    border-radius: 24px 10px 24px 10px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+/*-----------Group--------------*/
+#group-utility {
+    padding: 0px 5px;
+    transition: all .3s ease; 
+}
+
+/*-------------Launcher--------------*/
+#custom-launcher {
+    color: @blue;
+    background: @mantle;
+    margin: 0px 5px 0px 0px;
+    padding: 0px 35px 0px 15px;
+    border-radius: 0px 0px 40px 0px;
+    font-size: 37px;
+}
+
+/*--------------Cpu, Termperature, Colorpicker, Memory, Idle_inhibitor----------------*/
+#cpu, #temperature, #memory, #custom-pacman,#idle_inhibitor {
+    background: @mantle;
+    font-size: 20px;
+}
+
+#cpu {
+    color: @lavender;
+}
+
+#memory {
+    color: @lavender;
+}
+
+#temperature {
+    color: @lavender;
+}
+
+#custom-pacman {
+    color: @lavender;
+}
+
+#idle_inhibitor {
+    color: @lavender;
+}
+
+#idle_inhibitor.activated {
+    color: @lavender;
+}
+
+#cpu {
+    color: @lavender;
+    border-radius: 24px 0px 0px 10px;
+    padding-left: 16px;
+    padding-right: 7px;
+    margin-left: 10px;
+}
+
+#temperature, #memory, #custom-pacman, #idle_inhibitor {
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+/*---------------Expand---------------*/
+#custom-expand {
+    background: @mantle;
+    border-radius: 24px 0px 0px 10px;
+    padding-left: 16px;
+    padding-right: 7px;
+    margin-left: 10px;
+    color: @lavender;
+    margin: 5px;
+    font-size: 24px;
+}
+
+#custom-expand:hover {
+    color: @peach;
+}
